@@ -1,0 +1,484 @@
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+    --azul-principal:#0D6EFD;
+    --azul-secundario:#3B82F6;
+    --verde:#22C55E;
+    --oscuro:#0F172A;
+    --oscuro-secundario:#1E293B;
+    --texto:#F8FAFC;
+    --gris:#CBD5E1;
+}
+
+/* ==========================================
+   GENERALES
+========================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color:var(--oscuro);
+    color:var(--texto);
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    overflow-x:hidden;
+}
+
+section{
+    padding-top:80px;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight:700;
+}
+
+p{
+    color:var(--gris);
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.fondo-nav{
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+    transition:.3s;
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
+}
+
+.navbar-brand{
+    font-size:1.1rem;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:10px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:var(--azul-principal) !important;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    background:
+    linear-gradient(
+        rgba(15,23,42,.85),
+        rgba(15,23,42,.85)
+    ),
+    url("../img/hero/portada1.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero h1{
+    color:white;
+}
+
+.hero h2{
+    color:var(--azul-principal);
+}
+
+.hero p{
+    font-size:1.2rem;
+}
+
+.hero .btn{
+    margin-top:15px;
+}
+
+/* ==========================================
+   CONTADOR
+========================================== */
+
+.contador{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 0 30px rgba(13,110,253,.2);
+}
+
+.contador h3{
+    margin-bottom:25px;
+}
+
+.contador span{
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    color:var(--azul-principal);
+
+    display:block;
+}
+
+.contador p{
+    margin-top:5px;
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.card{
+
+    background:var(--oscuro-secundario);
+
+    border:none;
+
+    color:white;
+
+    transition:.4s ease;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 10px 25px rgba(13,110,253,.3);
+}
+
+.card-body p{
+    color:var(--gris);
+}
+
+.card img{
+
+    height:250px;
+
+    object-fit:cover;
+}
+
+.card i{
+
+    color:var(--azul-principal);
+}
+
+/* ==========================================
+   TITULOS
+========================================== */
+
+section h2{
+
+    margin-bottom:15px;
+
+    position:relative;
+}
+
+section h2::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:var(--azul-principal);
+
+    display:block;
+
+    margin:15px auto;
+}
+
+/* ==========================================
+   TECNOLOGIA
+========================================== */
+
+#tecnologia{
+
+    background:
+    linear-gradient(
+        rgba(15,23,42,.95),
+        rgba(15,23,42,.95)
+    );
+}
+
+/* ==========================================
+   RETO DIGITAL
+========================================== */
+
+#reto .card{
+
+    border-radius:20px;
+
+    padding:30px;
+}
+
+#pregunta{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+#opciones button{
+
+    width:100%;
+
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+.form-control,
+.form-select{
+
+    background:#0B1220;
+
+    border:1px solid #334155;
+
+    color:white;
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#0B1220;
+
+    color:white;
+
+    border-color:var(--azul-principal);
+
+    box-shadow:none;
+}
+
+.form-control::placeholder{
+    color:#94A3B8;
+}
+
+.form-select{
+    color:white;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.btn-primary{
+
+    background:var(--azul-principal);
+
+    border:none;
+}
+
+.btn-primary:hover{
+
+    background:var(--azul-secundario);
+}
+
+.btn-success{
+
+    background:var(--verde);
+
+    border:none;
+}
+
+.btn-success:hover{
+
+    transform:scale(1.02);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    background:#020617;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p{
+    margin-bottom:5px;
+}
+
+footer i{
+
+    transition: .3s ease;
+
+}
+
+footer i:hover{
+
+    color: #0D6EFD;
+
+    transform: scale(1.2);
+
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+.hero h1,
+.hero h2,
+.hero p,
+.hero a,
+.contador{
+
+    animation:aparecer 1s ease;
+}
+
+/* ==========================================
+   GALERIA FUTURA
+========================================== */
+
+.carousel-item img{
+
+    height:500px;
+
+    object-fit:cover;
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+    .hero{
+
+        text-align:center;
+    }
+
+    .contador{
+
+        margin-top:40px;
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE MOVIL
+========================================== */
+
+@media(max-width:768px){
+
+    .hero{
+
+        background-attachment:scroll;
+    }
+
+    .hero h1{
+
+        font-size:2.3rem;
+    }
+
+    .hero h2{
+
+        font-size:1.4rem;
+    }
+
+    .contador span{
+
+        font-size:1.5rem;
+    }
+
+    .card img{
+
+        height:220px;
+    }
+
+    .carousel-item img{
+
+        height:250px;
+    }
+
+    section{
+
+        padding-top:60px;
+    }
+}
+
+/* ==========================================
+   BOTON FLOTANTE WHATSAPP
+========================================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.whatsapp-float:hover{
+
+    color:white;
+
+    transform:scale(1.1);
+}
